@@ -1,9 +1,12 @@
 package com.luvtocode.ecommerce.dao;
 
-import com.luvtocode.ecommerce.entity.Product;
-
+import com.luvtocode.ecommerce.entity.ProductCategory;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-public interface ProductCategoryRepository extends JpaRepository<Product,Long> {
 
+@CrossOrigin("http://localhost:4200")
+@RepositoryRestResource(collectionResourceRel = "productCategory", path = "product-category")
+public interface ProductCategoryRepository extends JpaRepository<ProductCategory, Long> {
 }
